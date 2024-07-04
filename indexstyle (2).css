@@ -1,0 +1,69 @@
+h1{
+    text-align: center;
+}
+h2.h{
+    text-align: center;
+    margin-top: 50px;
+}
+.head{
+    /* border: 2px;
+    border-color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 100px; */
+    border: 5px solid black;
+    
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.det{
+    margin-top: 50px;
+}
+#token{
+    width: 80px;
+    height: 30px;
+    text-align: center;
+}
+.age{
+    margin-left: 80px;
+    /* text-decoration: underline; */
+}
+.pn{
+    margin-left: 80px;
+    /* text-decoration: underline; */
+}
+.title{
+    margin-left: 30px;
+    
+    
+    /* text-decoration: underline; */
+}
+.pdetails{
+    margin-top: 40px;
+    
+}
+.tok{
+    margin-left: 30px;
+}
+.dept{
+    margin-left: 30px;
+    margin-top: 30px;
+    
+}
+.dn{
+    /* text-decoration: underline; */
+    margin-left: 30px;
+}
+.dt{
+    margin-left: 30px;
+    
+    /* text-decoration: underline; */
+}
+.rn{
+    width: 80px;
+    text-align: center;
+}
+.sub{
+    margin-left: 30px;
+}

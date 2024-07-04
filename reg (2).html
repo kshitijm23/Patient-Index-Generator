@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Form in HTML CSS</title>
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="reg.css" />
+    <script>
+      function setdr(){
+            var ddl = document.getElementById("drdp");
+            var selectedOption= ddl.options[ddl.selectedIndex];
+            var val = selectedOption.getAttribute("data-mail");
+            var tb = document.getElementById("drname");
+            if(val=="0"){
+                tb.value = "Dr. Cardio";
+            }
+            else if(val=="1"){
+                tb.value = "Dr. Neuro";
+            }
+            else if(val == "2"){
+                tb.value = "Dr. Uro";
+            }
+            else if(val == "3"){
+                tb.value = "Dr. Derma"
+            }
+            var rn = document.getElementById("rn");
+            if(val=="0"){
+                rn.value = "1";
+            }
+            else if(val=="1"){
+                rn.value = "2";
+            }
+            else if(val == "2"){
+                rn.value = "3";
+            }
+            else if(val == "3"){
+                rn.value = "4"
+            }
+      }
+      // const date = document.getElementById('date');
+      // date.value = new Date().toISOString().split('T')[0];
+        
+    </script>
+  </head>
+  <body>
+    <div class="head">
+      
+        <h1>GOVERNMENT MEDICAL COLLEGE & MULTI-SPECIALITY HOSPITAL</h1>
+        <h2 class="h" id="opd">OPD TICKET/RECEIPT</h2>
+    </div>
+    <section class="container">
+        
+      <header>Token Form</header>
+      
+      <form action="#" class="form">
+        <div class="input-box">
+            <div class="det">
+                <label for="tok" class="tok">Token: </label><input type="number" id="token" value="1"></h3> </div>
+          <div class="det"><label>Title: </label>   
+          <select name="title" id="tit">
+            <option value="mr">Mr.</option>
+            <option value="mrs">Mrs.</option>
+            <option value="miss">Miss</option>
+          </select><br>
+        </div>   
+          <label>Patient Name</label>
+          <input type="text" placeholder="Enter patient name" required>
+        </div>
+
+        <!-- <div class="input-box">
+          <label>Email Address</label>
+          <input type="text" placeholder="Enter email address" required />
+        </div> -->
+
+        <div class="column">
+          <div class="input-box">
+            <div class="age-right"><label>Age</label>
+            <input type="number" placeholder="Enter Age" class="age" required>
+          </div>
+        </div>
+          <div class="input-box">
+            <!-- <label>Birth Date</label>
+            <input type="date" placeholder="Enter birth date" class="brt" required /> -->
+            <label id="ctgry">Category</label>
+            <select name="title" id="cat">
+                <option  value="sel">Select</option>
+                <option  value="open">Open</option>
+                <option  value="obc">OBC</option>
+                <option  value="scst">SC/ST</option>
+                <option  value="govt">Government Employee</option>
+                <option  value="mili">Militar/Ex-Military</option>
+              </select>
+          </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <div class="age-right"><label>Contact</label>
+            <input type="number" placeholder="Phone No." class="phn" required>
+          </div>
+        </div>
+          <div class="input-box">
+            <!-- <label>Birth Date</label>
+            <input type="date" placeholder="Enter birth date" class="brt" required /> -->
+            <label>City</label>
+            <input type="text" placeholder="Enter City" class="phn" required>
+          </div>
+        </div>
+        <div class="gender-box">
+          <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" checked />
+              <label for="check-male">male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" />
+              <label for="check-female">Female</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-other" name="gender" />
+              <label for="check-other">prefer not to say</label>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <!-- <label>Birth Date</label>
+            <input type="date" placeholder="Enter birth date" class="brt" required /> -->
+            <!-- <label id="ctgry">Department Name</label>
+            <select name="title" id="cat" onchange="return setdr()">
+                <option  value="sel">Select</option>
+                <option data-mail ="0" value="cardio">Cardiology</option>
+                <option data-mail ="1" value="neuro">Neurology</option>
+                <option data-mail ="2" value="uro">Urology</option>
+                <option data-mail ="3" value="derma">Dermatology</option>
+                
+              </select> -->
+              <label for="deptname" class="dn">Department Name</label>
+              <select name="title" id="drdp" onchange="return setdr()">
+                  <option  value="sel">Select</option>
+                  <option data-mail ="0" value="cardio">Cardiology</option>
+                  <option data-mail="1" value="neuro">Neurology</option>
+                  <option data-mail="2" value="uro">Urology</option>
+                  <option data-mail="3" value="derma">Dermatology</option>
+                </select>
+                <label for="drn" class="title">Doctors Name</label>
+                <input type="text" id="drname" class="phn" required>  
+                <label for="rn" class="title">Room</label>
+      <input type="number" id="rn" class="phn" required>
+          </div>
+        
+          <!-- <div class="input-box">
+            
+            <label>Doctors Name</label>
+            <input type="text"  class="phn" id="drname" required>
+          </div> -->
+        </div>
+        <div class="column">
+          <div class="input-box" id="tokdate">
+            <div class="age-right"><label>Token Date</label>
+            <!-- <input type="date" placeholder="Date" class="phn" id="date" required> -->
+            <input type="date" id="date" name="trip-start" />
+            <!-- <script src="date.js"></script> -->
+            
+          </div>
+        </div>
+          <div class="input-box">
+            <!-- <label>Birth Date</label>
+            <input type="date" placeholder="Enter birth date" class="brt" required /> -->
+            <label>Valid Till</label>
+            <!-- <input type="date" placeholder="Validity" class="phn" id="date" required> -->
+            <input type="date" id="date1" name="trip" />
+            <script src="date.js"></script>
+          </div>
+        </div>
+        
+        <button type="submit" onclick="func()">Submit</button>
+        <script>
+          function func(){
+              document.getElementById("token").stepUp(1);
+          }
+      </script>
+      </form>
+    </section>
+  </body>
+</html>
+
